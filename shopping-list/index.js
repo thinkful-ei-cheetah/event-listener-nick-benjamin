@@ -30,19 +30,19 @@ function main() {
     event.target.reset();
   });
 
-  $('.shopping-item-toggle').on('click', event => {
+  $('ul').on('click', '.shopping-item-toggle', event => {
     const targetItem = $(event.target).closest('li').find('.shopping-item');
     targetItem.toggleClass('shopping-item__checked');
   });
 
-  $('.shopping-item-delete').on('click', event => {
+  $('ul').on('click', '.shopping-item-delete', event => {
     const targetItem = $(event.target).closest('li');
-    console.log(targetItem);
     targetItem.remove();
   });
 }
 
 $(main);
+
 /*
 
 // Dog, Cat, rock
