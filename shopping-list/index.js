@@ -1,3 +1,4 @@
+@@ -1, 81 + 0, 0 @@
 /* eslint-disable no-undef */
 'use strict';
 
@@ -22,10 +23,10 @@ function main() {
     event.preventDefault();
 
     const item = $('#shopping-list-entry').val();
-    if(item) {
+    if (item) {
       $('ul').append(getItemHtml(item));
     }
-    
+
     event.target.reset();
   });
 
@@ -47,14 +48,14 @@ $(main);
 // Dog, Cat, rock
 
 $(function() {
-  
+
   $("button").click(function(event) {
     $("ul").append(
       "<li>" +
       ["cat", "dog", "rock"][Math.floor(Math.random()*3)] + "</li>"
     );
   });
-  
+
   $('ul').on('click', 'li', function(event) {
     this.remove();
   });
@@ -68,12 +69,12 @@ function handleBulbClicks() {
     const targetBulb = $(event.currentTarget);
     // and reference to all other bulbs
     const otherBulbs = $('.js-lightbulb').not(targetBulb);
-    
+
     // Remove 'bulb-on' class from other bulbs
     otherBulbs.removeClass('bulb-on');
-    // toggle the presence of 'bulb-on' on this bulb; 
+    // toggle the presence of 'bulb-on' on this bulb;
     targetBulb.toggleClass('bulb-on');
-  });  
+  });
 }
 
 $(handleBulbClicks);
